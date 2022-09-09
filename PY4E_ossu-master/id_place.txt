@@ -1,0 +1,64 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "19",
+               "short_name" : "19",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Raiņa bulvāris",
+               "short_name" : "Raiņa bulvāris",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Centra rajons",
+               "short_name" : "Centra rajons",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Rīga",
+               "short_name" : "Rīga",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Latvia",
+               "short_name" : "LV",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "1586",
+               "short_name" : "1586",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Raiņa bulvāris 19, Centra rajons, Rīga, LV-1586, Latvia",
+         "geometry" : {
+            "location" : {
+               "lat" : 56.95080979999999,
+               "lng" : 24.1163132
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 56.9520267802915,
+                  "lng" : 24.1172419802915
+               },
+               "southwest" : {
+                  "lat" : 56.9493288197085,
+                  "lng" : 24.1145440197085
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJx2mqzdPP7kYRScM-SE20ohY",
+         "plus_code" : {
+            "compound_code" : "X428+8G Riga, Rīgas pilsēta, Latvia",
+            "global_code" : "9G86X428+8G"
+         },
+         "types" : [ "establishment", "point_of_interest", "university" ]
+      }
+   ],
+   "status" : "OK"
+}
