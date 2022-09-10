@@ -19,8 +19,8 @@ Sử dụng Atom để viết code và Git Bash để chạy code, không cần 
 
 Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm quen với SQL. Nghe có vẻ hơi nhiều nhưng có vẻ mọi thứ chỉ dừng lại ở mức độ làm quen. Có các bài tập trắc nghiệm và tự luận, không quá khó khăn ngoại trừ các phần giao tiếp với web service có vẻ sẽ làm các bạn newbie gặp trắc trở 1 chút.
 
-Người hướng dẫn là Dr.Chuck. Tôi rất thích cách ông ấy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và ông ấy mang cả đồ thật ra làm ví dụ luôn kkk.
+Người hướng dẫn là Dr.Chuck. Tôi rất thích cách ông ấy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và ông ấy mang cả đồ thật ra làm ví dụ luôn.
 
-Khuyến nghị của mình: Nên học khóa học này nếu bạn chưa từng code. 
+Khuyến nghị của tôi: Nên học khóa học này nếu bạn chưa từng code. 
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
