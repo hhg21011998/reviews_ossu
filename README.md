@@ -19,8 +19,16 @@ Sử dụng Atom để viết code và Git Bash để chạy code, không cần 
 
 Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm quen với SQL. Nghe có vẻ hơi nhiều nhưng có vẻ mọi thứ chỉ dừng lại ở mức độ làm quen. Có các bài tập trắc nghiệm và tự luận, không quá khó khăn ngoại trừ các phần giao tiếp với web service có vẻ sẽ làm các bạn newbie gặp trắc trở 1 chút.
 
-Người hướng dẫn là Dr.Chuck. Tôi rất thích cách ông ấy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và ông ấy mang cả đồ thật ra làm ví dụ luôn.
-
-*Khuyến nghị của tôi:* Nên học khóa học này nếu bạn chưa từng code. 
+Giáo viên là Dr.Chuck. Tôi rất thích cách thầy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và thầy còn mang cả đồ thật ra làm ví dụ luôn.
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
+
+https://www.edx.org/course/introduction-to-computer-science-and-programming-7
+
+Khóa học tiếp theo của tôi sau PY4E. Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan, các bài tập liên quan đến những vấn đề thực tế hoặc là demo một trò chơi nhỏ. 
+
+Tuy được xếp vào phần Intro nhưng tôi nghĩ có vẻ hơi khó với người mới, tuy nhiên ở mức độ vừa phải. Gói gọn khá nhiều kiến thức trong 2 tháng. Bắt đầu từ những kiến thức cơ bản về Python, string, integer, list, dictionary,... và bisection search, độ phức tạp thuật toán Big O, các thuật toán tìm kiếm cơ bản như Buble sort, Selection sort, Merge sort. Việc cân bằng được những kiến thức này trong 1 khóa học quả thật họ đã làm rất tuyệt.
+
+Giáo viên là Ana Bell và Eric Grimson. Những giáo viên đến từ MIT :))) Cảm ơn internet đã cho tôi cơ hội được tham gia lớp học đến từ một trong những ngôi trường top đầu thế giới.
+
+### <a name="how-to-code"></a> How to Code 1 & 2
