@@ -1,5 +1,5 @@
 # Cảm nhận về các khóa học theo chương trình của OSSU
-Lưu ý: Đây là ý kiến cá nhân của tôi và được viết dựa trên cảm nhận của tôi. Hãy tự trải nghiệm và đưa ra nhận định riêng của bạn.
+LƯU Ý: Đây là ý kiến cá nhân của tôi và được viết dựa trên cảm nhận của tôi. Hãy tự trải nghiệm và đưa ra nhận định riêng của bạn.
 
 Nếu bạn chưa bao giờ nghe đến OSSU. [Nhấn vào đây](https://github.com/ossu/computer-science/).
 
@@ -21,6 +21,6 @@ Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc d�
 
 Người hướng dẫn là Dr.Chuck. Tôi rất thích cách ông ấy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và ông ấy mang cả đồ thật ra làm ví dụ luôn.
 
-Khuyến nghị của tôi: Nên học khóa học này nếu bạn chưa từng code. 
+*Khuyến nghị của tôi:* Nên học khóa học này nếu bạn chưa từng code. 
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
