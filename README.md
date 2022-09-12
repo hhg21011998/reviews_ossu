@@ -23,12 +23,16 @@ Giáo viên là Dr.Chuck. Tôi rất thích cách thầy giải thích mọi v�
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
 
-https://www.edx.org/course/introduction-to-computer-science-and-programming-7
+https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
 
 Khóa học tiếp theo của tôi sau PY4E. Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan, các bài tập liên quan đến những vấn đề thực tế hoặc là demo một trò chơi nhỏ. 
 
 Tuy được xếp vào phần Intro nhưng tôi nghĩ có vẻ hơi khó với người mới, tuy nhiên ở mức độ vừa phải. Gói gọn khá nhiều kiến thức trong 2 tháng. Bắt đầu từ những kiến thức cơ bản về Python, string, integer, list, dictionary,... và bisection search, độ phức tạp thuật toán Big O, các thuật toán tìm kiếm cơ bản như Buble sort, Selection sort, Merge sort. Việc cân bằng được những kiến thức này trong 1 khóa học quả thật họ đã làm rất tuyệt.
 
 Giáo viên là Ana Bell và Eric Grimson. Những giáo viên đến từ MIT :))) Cảm ơn internet đã cho tôi cơ hội được tham gia lớp học đến từ một trong những ngôi trường top đầu thế giới.
+
+https://www.edx.org/course/introduction-to-computer-science-and-programming-7
+
+Đây là phiên bản của khóa học này trên Edx, tôi nghĩ các bạn nên chọn phiên bản này vì có test case nhưng phiên bản này bị giới hạn về thời gian khi đăng kí free. Nếu bạn là người bận rộn và không có quá nhiều thời gian rảnh thì nên lựa chọn phiên bản của OCW. Về cơ bản thì 2 phiên bản này đều giống nhau, khác về Pset 1/2/5. 
 
 ### <a name="how-to-code"></a> How to Code 1 & 2
