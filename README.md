@@ -19,7 +19,11 @@ Sử dụng Atom để viết code và Git Bash để chạy code, không cần 
 
 Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm quen với SQL. Nghe có vẻ hơi nhiều nhưng có vẻ mọi thứ chỉ dừng lại ở mức độ làm quen. Có các bài tập trắc nghiệm và tự luận, không quá khó khăn ngoại trừ các phần giao tiếp với web service có vẻ sẽ làm các bạn newbie gặp trắc trở 1 chút.
 
-Giáo viên là Dr.Chuck. Tôi rất thích cách thầy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ. Và thầy còn mang cả đồ thật ra làm ví dụ luôn.
+Giáo viên là Dr.Chuck. Tôi rất thích cách thầy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ.
+
+*Certificate:*
+[Getting started with Python](https://coursera.org/share/0bdf1dcc229a6697592cfc3b41998724)
+[Data Structures](https://coursera.org/share/f7da5fe1ded1c6482b8de057cbebe5c9)
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
 
