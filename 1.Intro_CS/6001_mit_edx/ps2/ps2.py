@@ -45,26 +45,36 @@
 # Problem 3 - Using Bisection Search to Make the Program Faster
 
 balance = 320000
-annualInterestRate = 0.2
+annual_interest_rate = 0.2
 
-left = balance / 12
-right = (balance * (1 + annualInterestRate / 12.0)**12) / 12.0
-monthlyPayment = (left + right) / 2
+monthly_interest_rate = (annual_interest_rate) / 12.0
+
+monthly_payment_lower_bound = balance / 12
+monthly_payment_upper_bound = (balance * (1 + monthly_interest_rate)**12) / 12.0
+
+monthly_payment = (monthly_payment_lower_bound + monthly_payment_upper_bound) / 2
+
 epsilon = 0.01
+
 attempt = balance
 
-while abs(attempt) >= epsilon:
+while abs(attempt) >= epsilon :
+    
     attempt = balance
-    month = 1    
-    while month <= 12:
-        unpaid_balance = attempt - monthlyPayment
-        attempt = unpaid_balance + (annualInterestRate / 12.0) * unpaid_balance
+    month = 0
+    
+    while month < 12:
         month += 1
+        unpaid_balance = attempt - monthly_payment
+        interest = unpaid_balance * monthly_interest_rate
+        attempt = unpaid_balance + interest
 
-    if attempt > 0:
-        left = monthlyPayment
+    if attempt < 0:
+        monthly_payment_upper_bound = monthly_payment
     else:
-        right = monthlyPayment
-    monthlyPayment = (left + right) / 2
+        monthly_payment_lower_bound = monthly_payment
+    
+    mid_payment = (monthly_payment_lower_bound + monthly_payment_upper_bound) / 2
+    
+print(mid_payment)
 
-print("Lowest payment: " + str(round(monthlyPayment, 2)))
