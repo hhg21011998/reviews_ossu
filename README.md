@@ -22,7 +22,7 @@ Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc d�
 Giáo viên là Dr.Chuck. Tôi rất thích cách thầy giải thích mọi vấn đề và chia nhỏ các video thay vì để video dài cả tiếng đồng hồ.
 
 *Certificate:*
-[Getting started with Python](https://coursera.org/share/0bdf1dcc229a6697592cfc3b41998724)
+[Getting started with Python](https://coursera.org/share/0bdf1dcc229a6697592cfc3b41998724) | 
 [Data Structures](https://coursera.org/share/f7da5fe1ded1c6482b8de057cbebe5c9)
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
