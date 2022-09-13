@@ -62,46 +62,42 @@ import re
 # Do not display the paragraph text, only count them.
 # Test your program on several small web pages as well as some larger web pages.
 
-# import urllib.request, urllib.parse, urllib.error
-# from bs4 import BeautifulSoup
-# import ssl
-#
-# # Ignore SSL certificate errors
-# ctx = ssl.create_default_context()
-# ctx.check_hostname = False
-# ctx.verify_mode = ssl.CERT_NONE
-#
-# url = input('Enter - ')
-# html = urllib.request.urlopen(url, context=ctx).read()
-# soup = BeautifulSoup(html, 'html.parser')
-#
-# # Retrieve all of the anchor tags
-# tags = soup('p')
-# total = 0
-# for tag in tags:
-#     total += 1
-#     print("1:", tag)
-#
-# print(total)
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = input('Enter - ')
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+# Retrieve all of the anchor tags
+tags = soup('span')
+total = 0
+for tag in tags:
+    comment_count = re.findall(">([0-9]+)<", tag.decode())
+    total += int(comment_count[0])
+
+print(total)
 
 # Exercise 5: (Advanced) Change the socket program so that it only shows data after the headers
 # and a blank line have been received.
 # Remember that recv receives characters (newlines and all), not lines.
 
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-mysock.send(cmd)
+# mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# mysock.connect(('data.pr4e.org', 80))
+# cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+# mysock.send(cmd)
 
-document = ""
+# document = ""
 
-while True:
-    data = mysock.recv(512)
-    if len(data) < 1:
-        break
-    document += data.decode()
+# while True:
+#     data = mysock.recv(512)
+#     if len(data) < 1:
+#         break
+#     document += data.decode()
 
-posBlankLine = document.find("\r\n\r\n")
+# posBlankLine = document.find("\r\n\r\n")
 
-print(document[posBlankLine+1:])
-mysock.close()
+# print(document[posBlankLine+1:])
+# mysock.close()
