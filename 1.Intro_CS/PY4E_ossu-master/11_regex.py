@@ -1,4 +1,5 @@
 import re
+import sys
 
 # Exercise 1: Write a simple program to simulate the operation of the grep command on Unix.
 # Ask the user to enter a regular expression and count the number of lines that matched the regular expression:
@@ -22,13 +23,13 @@ import re
 # Extract the number from each of the lines using a regular expression and the findall() method.
 #  Compute the average of the numbers and print out the average as an integer.
 # fname = input("Enter file: ")
-#
+
 # try:
 #     fhand = open(fname)
 # except:
 #     print("Error file name!")
-#     exit()
-#
+#     sys.exit()
+
 # listX = list()
 # for line in fhand:
 #     line = line.strip()
@@ -42,7 +43,7 @@ import re
 
 
 # Autograder: Regular Expressions
-fhand = open("regex_sum_1456357.txt")
+fhand = open("regex_sum_1636599.txt")
 sum = 0
 
 for line in fhand:
