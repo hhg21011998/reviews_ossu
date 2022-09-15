@@ -23,7 +23,8 @@ Người hướng dẫn là Dr.Chuck. Tôi rất thích cách ông giải thích
 
 *Certificate:*
 [Getting started with Python](https://coursera.org/share/0bdf1dcc229a6697592cfc3b41998724) | 
-[Data Structures](https://coursera.org/share/f7da5fe1ded1c6482b8de057cbebe5c9)
+[Data Structures](https://coursera.org/share/f7da5fe1ded1c6482b8de057cbebe5c9) | 
+[Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/verify/FX89Y8F7LEJE)
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
 
