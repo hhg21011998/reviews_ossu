@@ -20,20 +20,25 @@ Sử dụng Atom để viết code và Git Bash để chạy code, không cần 
 Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm quen với SQL. Nghe có vẻ hơi nhiều nhưng có vẻ mọi thứ chỉ dừng lại ở mức độ làm quen. Có các bài tập trắc nghiệm và tự luận, không quá khó khăn ngoại trừ các phần giao tiếp với web service có vẻ sẽ làm các bạn newbie gặp trắc trở 1 chút.
 
 *Certificate:*
-[Getting started with Python](https://coursera.org/share/0bdf1dcc229a6697592cfc3b41998724) | 
-[Data Structures](https://coursera.org/share/f7da5fe1ded1c6482b8de057cbebe5c9) | 
-[Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/verify/FX89Y8F7LEJE)
+[Python for Everybody](https://www.coursera.org/account/accomplishments/specialization/certificate/3XG2HBCX2YQE)
 
 ### <a name="mit6001x"></a> Intro to CS and Programming with Python
 
 https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
 
-Khóa học tiếp theo của tôi sau PY4E. Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan, các bài tập liên quan đến những vấn đề thực tế hoặc là demo một trò chơi nhỏ. 
+Khóa học tiếp theo của tôi sau PY4E. Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan, có lẽ là khóa học nhập môn hay nhất mà tôi từng biết. Mất khoảng 2 tháng để tôi hoàn thành khóa học này, mức độ thử thách là vừa phải. Bắt đầu từ những kiểu dữ liệu cho đến những thuật toán điển hình như bisection search và những thuật toán sắp xếp cơ bản, hướng đối tượng (cơ bản).
 
-Tuy được xếp vào phần Intro nhưng tôi nghĩ có vẻ hơi khó với người mới, tuy nhiên ở mức độ vừa phải. Gói gọn khá nhiều kiến thức trong 2 tháng. Bắt đầu từ những kiến thức cơ bản về Python, string, integer, list, dictionary,... sau đó là những khái niệm về OOP và bisection search, độ phức tạp thuật toán Big O, các thuật toán tìm kiếm cơ bản như Buble sort, Selection sort, Merge sort. Việc cân bằng được những kiến thức này trong 1 khóa học quả thật họ đã làm rất tuyệt.
-
-https://www.edx.org/course/introduction-to-computer-science-and-programming-7
-
-Đây là phiên bản của khóa học này trên Edx, tôi nghĩ các bạn nên chọn phiên bản này vì có test case nhưng phiên bản này bị giới hạn về thời gian khi đăng kí free. Nếu bạn là người bận rộn và không có quá nhiều thời gian rảnh thì nên lựa chọn phiên bản của OCW. Về cơ bản thì 2 phiên bản này đều giống nhau, khác về Pset 1/2/5. 
+Các bài tập: Tìm kiếm lãi suất tốt nhất, Hangman game, Trì chơi đoán ô chữ, Giải mã các kí tự bị mã hóa, etc...
 
 ### <a name="how-to-code"></a> How to Code 1 & 2
+
+https://www.edx.org/course/how-to-code-simple-data
+
+Một khóa học tưởng chừng đơn giản với một ngôn ngữ nhàm chán. Tôi được tiếp xúc với ngôn ngữ Racket, khá giống với Lisp (được viết vào khoảng năm 1960, là ngôn ngữ high-level lâu đời thứ 2 vẫn còn được sử dụng đến bây giờ). Đặc điểm là sử dụng hàng tấn dấu (), thật sự rất nhiều dấu (), làm tôi liên tưởng đến việc học toán hơn là học lập trình. Khóa học xoay quanh chủ đề về đệ quy (không đơn giản nha).
+
+Sử dụng Dr.Racket IDE, thứ đã khiến ngôn ngữ này không hề nhàm chán, nó cài đặt sẵn mọi thứ từ ngôn ngữ, debugger, code editer, đầy đủ nhưng không quá màu mè. Một điều nữa khiến khóa học này rất đáng để học đó là người hướng dẫn ngồi code, debug và giải thích từng dòng cùng người học (nhiều khóa học không được như thế).
+
+Người hướng dẫn là tác giả đã đề xuất Lập trình hướng khía cạnh [AOP](https://viblo.asia/p/aop-la-gi-uu-nhuoc-diem-cua-aop-aspect-oriented-programming-trong-java-3P0lPk2oZox). Những phần đầu của khóa học, bạn sẽ được hướng dẫn viết code một cách kỉ luật, tuân thủ 1 khuôn mẫu mà người hướng dẫn đề ra. Đầu tiên bạn sẽ viết một cái signature (kiểu dữ liệu của đầu vào/ra) của hàm, sau đó sẽ viết một cái ví dụ của hàm, rồi sẽ viết các test cho hàm đó (nếu tham số là thế này thì hàm phải trả về kết quả thế này...), khi mọi test đều ok thì bạn mới bắt đầu viết logic cho hàm
+
+
+
