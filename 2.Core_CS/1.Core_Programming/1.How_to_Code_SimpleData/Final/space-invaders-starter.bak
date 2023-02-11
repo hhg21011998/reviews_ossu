@@ -1,0 +1,239 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname space-invaders-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(require 2htdp/universe)
+(require 2htdp/image)
+
+;; Space Invaders
+
+
+;; Constants:
+
+(define WIDTH  300)
+(define HEIGHT 500)
+
+(define INVADER-X-SPEED 1.5)  ;speeds (not velocities) in pixels per tick
+(define INVADER-Y-SPEED 1.5)
+(define TANK-SPEED 2)
+(define MISSILE-SPEED 10)
+
+(define HIT-RANGE 10)
+
+(define INVADE-RATE 100)
+
+(define BACKGROUND (empty-scene WIDTH HEIGHT))
+
+(define INVADER
+  (overlay/xy (ellipse 10 15 "outline" "blue")              ;cockpit cover
+              -5 6
+              (ellipse 20 10 "solid"   "blue")))            ;saucer
+
+(define TANK
+  (overlay/xy (overlay (ellipse 28 8 "solid" "black")       ;tread center
+                       (ellipse 30 10 "solid" "green"))     ;tread outline
+              5 -14
+              (above (rectangle 5 10 "solid" "black")       ;gun
+                     (rectangle 20 10 "solid" "black"))))   ;main body
+
+(define TANK-HEIGHT/2 (/ (image-height TANK) 2))
+
+(define MISSILE (ellipse 5 15 "solid" "red"))
+
+
+
+;; Data Definitions:
+
+(define-struct game (invaders missiles tank))
+;; Game is (make-game  (listof Invader) (listof Missile) Tank)
+;; interp. the current state of a space invaders game
+;;         with the current invaders, missiles and tank position
+
+;; Game constants defined below Missile data definition
+#;
+(define (fn-for-game s)
+  (... (fn-for-loi (game-invaders s))
+       (fn-for-lom (game-missiles s))
+       (fn-for-tank (game-tank s))))
+
+
+
+(define-struct tank (x dir))
+;; Tank is (make-tank Number Integer[-1, 1])
+;; interp. the tank location is x, HEIGHT - TANK-HEIGHT/2 in screen coordinates
+;;         the tank moves TANK-SPEED pixels per clock tick left if dir -1, right if dir 1
+(define T0 (make-tank (/ WIDTH 2) 1))   ;center going right
+(define T1 (make-tank 50 1))            ;going right
+(define T2 (make-tank 50 -1))           ;going left
+#;
+(define (fn-for-tank t)
+  (... (tank-x t) (tank-dir t)))
+
+
+
+(define-struct invader (x y dx))
+;; Invader is (make-invader Number Number Number)
+;; interp. the invader is at (x, y) in screen coordinates
+;;         the invader along x by dx pixels per clock tick
+;;
+(define I1 (make-invader 150 100 12))           ;not landed, moving right
+(define I2 (make-invader 150 HEIGHT -10))       ;exactly landed, moving left
+(define I3 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
+#;
+(define (fn-for-invader invader)
+  (... (invader-x invader) (invader-y invader) (invader-dx invader)))
+;; Template rules used:
+;; - compound: 3 fields
+;;
+;;
+;; ListOfInvader is one of:
+;; - empty
+;; - (cons Invader ListOfInvader)
+;; interp. a list of invader
+(define LOI1 empty)
+(define LOI2 (cons (make-invader 150 HEIGHT -10) (cons (make-invader 150 100 12) empty)))
+#;
+(define (fn-for-loi loi)
+  (cond [(empty? loi) (...)]
+        [else (... (fn-for-invader (first loi))
+                   (fn-for-loi (rest loi)))]))
+;;
+;; Template rules used:
+;; - one of: 2 cases
+;; - atomic distinct: empty
+;; - compound: (cons Invader ListOfInvader
+;; - reference: (first invader) is Invader
+;; - self-reference: (rest invader) is ListOfInvader
+
+
+
+(define-struct missile (x y))
+;; Missile is (make-missile Number Number)
+;; interp. the missile's location is x y in screen coordinates
+;;
+(define M1 (make-missile 150 300))                               ;not hit U1
+(define M2 (make-missile (invader-x I1) (+ (invader-y I1) 10)))  ;exactly hit U1
+(define M3 (make-missile (invader-x I1) (+ (invader-y I1)  5)))  ;> hit U1
+#;
+(define (fn-for-missile m)
+  (... (missile-x m) (missile-y m)))
+;;
+;; ListOfMissile is one of:
+;; - empty
+;; - (cons Missile ListOfMissile)
+;; interp. a list of missile
+;;
+(define LOM1 empty)
+(define LOM2 (cons (make-missile (invader-x I1) (+ (invader-y I1) 10))
+                   (cons (make-missile (invader-x I1) (+ (invader-y I1) 10))
+                         empty)))
+#;
+(define (fn-for-lom lom)
+  (cond [(empty? lom) (...)]
+        [else (... (fn-for-missile (first lom))
+                   (fn-for-lom (rest lom)))]))
+;; Template rules used:
+;; - one of: 2 cases
+;; - atomic distinct: empty
+;; - compound: (cons Invader listOfInvader)
+;; - reference: (first lom) is Missile
+;; - self-reference: (rest lom) is ListOfMissile
+
+
+;;
+(define G0 (make-game empty empty T0))
+(define G1 (make-game empty empty T1))
+(define G2 (make-game (list I1) (list M1) T1))
+(define G3 (make-game (list I1 I2) (list M1 M2) T2))
+
+
+
+;; =================
+;; Functions:
+;; Game -> Game
+;; start the world with initial state g, for example (main G0).
+;;
+
+(define (main g)
+  (big-bang g                 ; Game
+    (on-tick tock)            ; Game -> Game
+    (to-draw render)          ; Game -> Image
+    (on-key handle-key)))     ; Game KeyEvent -> Game
+
+;; Game -> Game
+;; produce the next ... 
+;; !!!
+(define (tock g) G0)
+
+
+;; Game -> Image
+;; render Game to the screen 
+(check-expect (render G0) (place-image empty-image
+                                       0 0
+                                       (place-image empty-image
+                                                    0 0
+                                                    (place-image TANK
+                                                                 (/ WIDTH 2) (- HEIGHT TANK-HEIGHT/2)
+                                                                 BACKGROUND))))
+(check-expect (render G3) (place-image INVADER
+                                       150 100
+                                       (place-image INVADER
+                                                    150 HEIGHT
+                                                    (place-image MISSILE
+                                                                 150 300
+                                                                 (place-image MISSILE
+                                                                              (invader-x I1) (+ (invader-y I1) 10)
+                                                                              (place-image TANK
+                                                                                           50 (- HEIGHT TANK-HEIGHT/2)
+                                                                                           BACKGROUND))))))
+
+(define (render g) BACKGROUND)
+
+#;
+(define (fn-for-game s)
+  (... (fn-for-loi (game-invaders s))
+       (fn-for-lom (game-missiles s))
+       (fn-for-tank (game-tank s))))
+
+
+
+
+;; Game KeyEvent -> Game
+;; determine keyboard button to navigate the tank.
+(check-expect (handle-key G0     " ") (make-game empty     (list (make-missile (/ WIDTH 2) (- HEIGHT TANK-HEIGHT/2))   ) T0))
+(check-expect (handle-key G2     " ") (make-game (list I1) (list (make-missile 50          (- HEIGHT TANK-HEIGHT/2)) M1) T1))
+(check-expect (handle-key G0 "right") (make-game empty empty (make-tank (+ (/ WIDTH 2) 1)  1)))
+(check-expect (handle-key G3 "right") (make-game (list I1 I2) (list M1 M2) (make-tank 51 1)))
+(check-expect (handle-key G0  "left") (make-game empty empty (make-tank (- (/ WIDTH 2) 1) -1)))
+
+
+(define (handle-key g ke)
+  (cond [(key=? ke     " ") (make-game (game-invaders g) (create-missle (game-missiles g) (game-tank g)) (game-tank g))]
+        [(key=? ke "right") (make-game (game-invaders g) (game-missiles g) (go-right (game-tank g)))]
+        [(key=? ke  "left") (make-game (game-invaders g) (game-missiles g) (go-left (game-tank g)))]
+        [else g]))
+
+;; ListOfMissile Tank -> ListOfMissile
+;; add new missile to the list of missile
+;;
+(define (create-missle lom t)
+  (cond [(empty? lom) (list (make-missile (tank-x t) (- HEIGHT TANK-HEIGHT/2)))]
+        [else (cons (make-missile (tank-x t) (- HEIGHT TANK-HEIGHT/2)) 
+                    lom)])) 
+ 
+;; Tank -> Tank
+;; control the tank go to right
+;;
+(define (go-right t)
+  (if (< (tank-x t) WIDTH)
+      (make-tank (+ (tank-x t) 1) 1)
+      t))
+
+;; Tank -> Tank
+;; control the tank go to left
+;;
+(define (go-left t)
+  (if (> (tank-x t) 0)
+      (make-tank (- (tank-x t) 1) -1)
+      t)) 
+
+
