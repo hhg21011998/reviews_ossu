@@ -160,28 +160,9 @@
     (on-key handle-key)))     ; Game KeyEvent -> Game
 
 ;; Game -> Game
-;; produce the next game in every tick
-(check-expect (tock G2) (make-game (list (make-invader (+ 150 12) (+ 100 INVADER-Y-SPEED) 12))
-                                   (list (make-missile 150 (+ 300 MISSILE-SPEED)))
-                                   T1))
-(check-expect (tock G3) (make-game (list (make-invader (+ 150  12) (+ 100 12) 12)
-                                         (make-invader (+ 150 -10) (+ HEIGHT INVADER-Y-SPEED) -10))
-                                   (list (make-missile 150 (+ 300 MISSILE-SPEED))
-                                         (make-missile (invader-x I1) (+ (invader-y I1) MISSILE-SPEED)))
-                                   T2))
-
-;(define (tock g) G0) ;stub
-
-(define (tock s)
-  (make-game (create-invaders (game-invaders s))
-             (create-missiles (game-missiles s))
-             (game-tank s)))
-
-;; ListOfInvader -> ListOfInvader
-;;
-(define (create-invaders loi)
-  ())
-
+;; produce the next ... 
+;; !!!
+(define (tock g) G0)
 
 
 ;; Game -> Image
@@ -204,37 +185,15 @@
                                                                               (place-image TANK
                                                                                            50 (- HEIGHT TANK-HEIGHT/2)
                                                                                            BACKGROUND))))))
-;(define (render g) BACKGROUND) ;stub
 
-(define (render s)
-  (place-invader (game-invaders s)
-                 (game-missiles s)
-                 (game-tank s)))
+(define (render g) BACKGROUND)
 
-;; ListOfInvader Image -> Image
-;;
-(define (place-invader loi lom t)
-  (cond [(empty? loi) (place-missile lom t)] 
-        [else (place-image
-               INVADER
-               (invader-x (first loi)) (invader-y (first loi))
-               (place-invader (rest loi) lom t))]))
+#;
+(define (fn-for-game s)
+  (... (fn-for-loi (game-invaders s))
+       (fn-for-lom (game-missiles s))
+       (fn-for-tank (game-tank s))))
 
-
-;; ListOfMissile Tank -> Image
-;;
-(define (place-missile lom t)
-  (cond [(empty? lom) (place-tank t)]
-        [else (place-image MISSILE
-                           (missile-x (first lom)) (missile-y (first lom))
-                           (place-missile (rest lom) t))]))
-
-;; Tank -> Image
-;;
-(define (place-tank t)
-  (place-image TANK
-               (tank-x t) (- HEIGHT TANK-HEIGHT/2)
-               BACKGROUND))
 
 
 
@@ -242,9 +201,9 @@
 ;; determine keyboard button to navigate the tank.
 (check-expect (handle-key G0     " ") (make-game empty     (list (make-missile (/ WIDTH 2) (- HEIGHT TANK-HEIGHT/2))   ) T0))
 (check-expect (handle-key G2     " ") (make-game (list I1) (list (make-missile 50          (- HEIGHT TANK-HEIGHT/2)) M1) T1))
-;(check-expect (handle-key G0 "right") (make-game empty empty (make-tank (+ (/ WIDTH 2) 1)  1)))
-;(check-expect (handle-key G3 "right") (make-game (list I1 I2) (list M1 M2) (make-tank 51 1)))
-;(check-expect (handle-key G0  "left") (make-game empty empty (make-tank (- (/ WIDTH 2) 1) -1)))
+(check-expect (handle-key G0 "right") (make-game empty empty (make-tank (+ (/ WIDTH 2) 1)  1)))
+(check-expect (handle-key G3 "right") (make-game (list I1 I2) (list M1 M2) (make-tank 51 1)))
+(check-expect (handle-key G0  "left") (make-game empty empty (make-tank (- (/ WIDTH 2) 1) -1)))
 
 
 (define (handle-key g ke)
@@ -266,7 +225,7 @@
 ;;
 (define (go-right t)
   (if (< (tank-x t) WIDTH)
-      (make-tank (+ (tank-x t) 10) TANK-SPEED)
+      (make-tank (+ (tank-x t) 1) 1)
       t))
 
 ;; Tank -> Tank
@@ -274,7 +233,7 @@
 ;;
 (define (go-left t)
   (if (> (tank-x t) 0)
-      (make-tank (- (tank-x t) 10) TANK-SPEED)
+      (make-tank (- (tank-x t) 1) -1)
       t)) 
 
 
