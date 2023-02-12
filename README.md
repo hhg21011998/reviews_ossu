@@ -38,7 +38,11 @@ Một khóa học tưởng chừng đơn giản với một ngôn ngữ nhàm ch
 
 Sử dụng Dr.Racket IDE, thứ đã khiến ngôn ngữ này không hề nhàm chán, nó cài đặt sẵn mọi thứ từ ngôn ngữ, debugger, code editer, đầy đủ nhưng không quá màu mè. Một điều nữa khiến khóa học này rất đáng để học đó là người hướng dẫn ngồi code, debug và giải thích từng dòng cùng người học (nhiều khóa học không được như thế).
 
-Người hướng dẫn là tác giả đã đề xuất Lập trình hướng khía cạnh [AOP](https://viblo.asia/p/aop-la-gi-uu-nhuoc-diem-cua-aop-aspect-oriented-programming-trong-java-3P0lPk2oZox). Những phần đầu của khóa học, bạn sẽ được hướng dẫn viết code một cách kỉ luật, tuân thủ 1 khuôn mẫu mà người hướng dẫn đề ra. Đầu tiên bạn sẽ viết một cái signature (kiểu dữ liệu của đầu vào/ra) của hàm, sau đó sẽ viết một cái ví dụ của hàm, rồi sẽ viết các test cho hàm đó (nếu tham số là thế này thì hàm phải trả về kết quả thế này...), khi mọi test đều ok thì bạn mới bắt đầu viết logic cho hàm
+Người hướng dẫn là tác giả đã đề xuất Lập trình hướng khía cạnh [AOP](https://viblo.asia/p/aop-la-gi-uu-nhuoc-diem-cua-aop-aspect-oriented-programming-trong-java-3P0lPk2oZox). Những phần đầu của khóa học, bạn sẽ được hướng dẫn viết code một cách kỉ luật, tuân thủ 1 khuôn mẫu mà người hướng dẫn đề ra. Đầu tiên bạn sẽ viết một cái signature (kiểu dữ liệu của đầu vào/ra) của hàm, sau đó sẽ viết một cái ví dụ của hàm, rồi sẽ viết các test cho hàm đó (nếu tham số là thế này thì hàm phải trả về kết quả thế này...), khi mọi test đều ok thì bạn mới bắt đầu viết logic cho hàm, và khi chạy thử nếu hàm đáp ứng được các yêu cầu của test thì done.
+
+Đây là một bài tập nhỏ cuối khóa:
+![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
+
 
 
 
