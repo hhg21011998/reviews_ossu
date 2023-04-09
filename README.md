@@ -24,9 +24,9 @@ Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc d�
 
 https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
 
-Khóa học tiếp theo của tôi sau PY4E, một khoá học của MIT (waooo). Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan. Mất khoảng 2 tháng để tôi hoàn thành khóa học này, mức độ thử thách là vừa phải. Bắt đầu từ những kiểu dữ liệu cho đến những thuật toán điển hình như bisection search và những thuật toán sắp xếp cơ bản.
+Khóa học tiếp theo của tôi sau PY4E, một khoá học online do MIT cung cấp (waooo). Thật sự rất thích cách thiết kế các bài tập trong khóa học này, nó khiến cho các bài tập không hề khô khan. Mất khoảng gần 3 tháng để tôi hoàn thành khóa học này, mức độ thử thách là vừa phải. Bắt đầu từ những khái niệm cơ bản như PY4E cho đến những thuật toán tìm kiếm như bisection search và những thuật toán sắp xếp như Buble, Selecting sort.
 
-Các bài tập: Tìm kiếm lãi suất tốt nhất, Hangman game, Trò chơi đoán ô chữ, Giải mã các kí tự bị mã hóa, etc...
+Các bài tập: Tìm kiếm lãi suất tốt nhất (áp dụng Bisection search), Hangman game (trải nghiệm lợi ích khi sử dụng function), Trò chơi đoán ô chữ, Giải mã các kí tự bị mã hóa, etc...
 
 ### <a name="how-to-code"></a> How to Code 1 & 2
 
