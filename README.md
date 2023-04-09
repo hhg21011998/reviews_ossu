@@ -15,7 +15,7 @@ https://www.coursera.org/specializations/python
 
 Đây là khóa học đầu tiên của tôi, bắt đầu vào tháng 4-2022. Tôi nhận thấy đây là một khóa học rất cơ bản và chi tiết dành cho những người chưa bao giờ lập trình, thậm chí là chưa bao giờ chạm vào code. Tôi cũng thường giới thiệu cho bạn bè khóa học này làm khóa học nhập môn.
 
-Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm việc với SQL. Có các bài tập trắc nghiệm và tự luận. Điều tuyệt vời là khóa học này cung cấp 1 trang test để kiểm thử code mà mình viết ra dành cho các bài tập được giao. (theo chương trình OSSU thì chỉ cần học đến chap 11 là đạt, những chap sau có thể tham khảo thêm).
+Chúng ta sẽ được làm quen với ngôn ngữ Python, các cấu trúc dữ liệu cơ bản của 1 ngôn ngữ lập trình, cách giao tiếp với 1 tệp văn bản ở bên ngoài, cách lấy dữ liệu từ các file XML và JSON, làm việc với SQL. Có các bài tập trắc nghiệm và tự luận. Điều tuyệt vời là khóa học này cung cấp 1 trang test để kiểm thử code mà mình viết ra dành cho các bài tập được giao. (theo chương trình OSSU thì chỉ cần học đến phần Tuple là đạt, những phần sau có thể tham khảo thêm).
 
 *Certificate:*
 [Python for Everybody](https://www.coursera.org/account/accomplishments/specialization/certificate/3XG2HBCX2YQE)
