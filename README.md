@@ -36,13 +36,13 @@ Các bài tập: Tìm kiếm lãi suất tốt nhất, Hangman game, Trò chơi 
 
 https://www.edx.org/course/how-to-code-simple-data
 
-Một khóa học tưởng chừng đơn giản với một ngôn ngữ nhàm chán. mình được tiếp xúc với ngôn ngữ Racket, khá giống với Lisp (được viết vào khoảng năm 1960, là ngôn ngữ high-level lâu đời thứ 2 vẫn còn được sử dụng đến bây giờ). Đặc điểm là sử dụng hàng tấn dấu (), thật sự rất nhiều dấu (), làm mình liên tưởng đến việc học toán hơn là học lập trình. Khóa học xoay quanh chủ đề về đệ quy (không đơn giản nha).
+Đây là khoá học thiết kế chương trình, không phải khoá học ngôn ngữ lập trình. Mình được tiếp xúc với ngôn ngữ Racket, khá giống với Lisp (được viết vào khoảng năm 1960, là ngôn ngữ high-level lâu đời thứ 2 vẫn còn được sử dụng đến bây giờ). Đặc điểm là sử dụng hàng tấn dấu (), thật sự rất nhiều dấu (), làm mình liên tưởng đến việc học toán hơn là học lập trình, do đó mình tiết kiệm được rất nhiều thời gian để tập trung vào phương pháp thiết kế thay vì phải tìm hiểu ngôn ngữ. Khóa học xoay quanh chủ đề về đệ quy.
 
-Sử dụng Dr.Racket IDE, thứ đã khiến ngôn ngữ này không hề nhàm chán, nó cài đặt sẵn mọi thứ từ ngôn ngữ, debugger, code editer. Một điều nữa khiến khóa học này rất đáng để học đó là người hướng dẫn ngồi code, debug và giải thích từng dòng cùng người học (nhiều khóa học không được như thế).
+Sử dụng Dr.Racket IDE, thứ đã khiến ngôn ngữ này không hề nhàm chán, nó cài đặt sẵn mọi thứ từ ngôn ngữ, debugger, code editer.
 
 Những phần đầu của khóa học, bạn sẽ được hướng dẫn viết code một cách kỉ luật, tuân thủ 1 khuôn mẫu mà người hướng dẫn đề ra. Đầu tiên bạn sẽ viết một cái signature (kiểu dữ liệu của đầu vào/ra) của hàm, sau đó sẽ viết một cái ví dụ của hàm, rồi sẽ viết các test cho hàm đó (nếu tham số là thế này thì hàm phải trả về kết quả thế này...), khi mọi test đều ok thì bạn mới bắt đầu viết logic cho hàm, và khi chạy thử nếu hàm đáp ứng được các yêu cầu của test thì done. Khá giống với phương pháp [TDD](https://en.wikipedia.org/wiki/Test-driven_development#:~:text=Test-driven%20development%20(TDD),software%20against%20all%20test%20cases.).
 
-Đây là một bài tập nhỏ cuối khóa (thứ khiến mình thấy khoá học này hấp dẫn, kết quả của những dòng code mà bạn viết ra không chỉ là những con số hay chữ cái hay kí tự hiển thị trên shell mà là cả một trò chơi trực quan):
+Đây là một bài tập nhỏ cuối khóa (thứ khiến mình thấy khoá học này hấp dẫn, kết quả của những dòng code mà bạn viết ra không chỉ là những con số hay chữ cái hay kí tự hiển thị trên shell mà là cả một trò chơi):
 
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
 
