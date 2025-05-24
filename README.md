@@ -51,3 +51,5 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 Happy New Year 2025!
 Hello 4/12/2025
+https://learning.edx.org/course/course-v1:UBCx+SPD1x+2T2015/home
+How to code 2 thật sự rất khó hiểu @@
