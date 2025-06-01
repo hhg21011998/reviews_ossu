@@ -50,9 +50,9 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
 
 
+*Hello 6/1/2025*
 
-
-Hello 5/25/2025
+# 7b: Local
 
 **1. Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.**
 
