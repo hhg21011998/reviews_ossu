@@ -52,12 +52,9 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 
 
-Happy New Year 2025!
+Hello 5/25/2025
 
-Hello 4/12/2025
-
-7b Local: Module tập trung vào refactoring (tái cấu trúc) code hiện có để cải thiện cấu trúc, thay vì viết code mới.
-Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.
+1. Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.
 
 Mục tiêu học tập (Learning Goals):
 
@@ -70,3 +67,25 @@ Thực hiện hand-evaluation (đánh giá thủ công) các biểu thức local
 Sử dụng local để encapsulate (đóng gói) các hàm phụ trợ (private helper functions).
 
 Sử dụng local để tránh redundant computation (tính toán lặp lại không cần thiết).
+
+2. Khái niệm chính: Encapsulation
+
+Encapsulation là gì?
+
+Định nghĩa: Encapsulation là kỹ thuật đóng gói các thành phần chương trình (functions, constants, structures) vào một đơn vị (capsule), chỉ để lộ giao diện công khai (public interface).
+
+Mục đích:
+
+- Namespace management: Tránh xung đột tên trong hệ thống lớn.
+
+- Ẩn chi tiết triển khai: Ngăn gọi nhầm hàm phụ trợ hoặc phụ thuộc vào logic nội bộ.
+
+- Tăng tính module hóa: Làm code dễ bảo trì, tái sử dụng, rõ ràng.
+
+Cơ chế với local:
+
+- Cú pháp: (local [define ... define ...] body)
+
+- Định nghĩa trong local chỉ khả dụng trong body.
+
+- body gọi hàm nội bộ để bắt đầu xử lý, gọi là trampoline (thuật ngữ vui ám chỉ việc "nhảy" vào logic nội bộ).
