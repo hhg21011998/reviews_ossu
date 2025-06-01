@@ -54,27 +54,27 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 Hello 5/25/2025
 
-1. Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.
+**1. Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.**
 
-Mục tiêu học tập (Learning Goals):
+**Mục tiêu học tập (Learning Goals):**
 
-Viết local expressions đúng cú pháp.
+- Viết local expressions đúng cú pháp.
 
-Vẽ sơ đồ lexical scoping trên các biểu thức sử dụng local.
+- Vẽ sơ đồ lexical scoping trên các biểu thức sử dụng local.
 
-Thực hiện hand-evaluation (đánh giá thủ công) các biểu thức local.
+- Thực hiện hand-evaluation (đánh giá thủ công) các biểu thức local.
 
-Sử dụng local để encapsulate (đóng gói) các hàm phụ trợ (private helper functions).
+- Sử dụng local để encapsulate (đóng gói) các hàm phụ trợ (private helper functions).
 
-Sử dụng local để tránh redundant computation (tính toán lặp lại không cần thiết).
+- Sử dụng local để tránh redundant computation (tính toán lặp lại không cần thiết).
 
-2. Khái niệm chính: Encapsulation
+**2. Khái niệm chính: Encapsulation**
 
-Encapsulation là gì?
+**Encapsulation là gì?**
 
 Định nghĩa: Encapsulation là kỹ thuật đóng gói các thành phần chương trình (functions, constants, structures) vào một đơn vị (capsule), chỉ để lộ giao diện công khai (public interface).
 
-Mục đích:
+**Mục đích:**
 
 - Namespace management: Tránh xung đột tên trong hệ thống lớn.
 
@@ -82,7 +82,7 @@ Mục đích:
 
 - Tăng tính module hóa: Làm code dễ bảo trì, tái sử dụng, rõ ràng.
 
-Cơ chế với local:
+**Cơ chế với local:**
 
 - Cú pháp: (local [define ... define ...] body)
 
