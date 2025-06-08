@@ -50,7 +50,7 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
 
 
-*Hello 6/1/2025*
+
 
 # 7b: Local
 
@@ -68,7 +68,7 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 - Sử dụng local để tránh redundant computation (tính toán lặp lại không cần thiết).
 
-**2. Khái niệm chính: Encapsulation**
+**2. Khái niệm chính**
 
 **Encapsulation là gì?**
 
@@ -89,3 +89,29 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 - Định nghĩa trong local chỉ khả dụng trong body.
 
 - body gọi hàm nội bộ để bắt đầu xử lý, gọi là trampoline (thuật ngữ vui ám chỉ việc "nhảy" vào logic nội bộ).
+
+**Redundant Computation và Exponential Growth**
+
+Định nghĩa: 
+
+Redundant Computation: Tính toán cùng một giá trị nhiều lần trong chương trình, gây lãng phí thời gian và tài nguyên.
+
+Trong các trường hợp đơn giản (như (+ x 1) lặp lại), tác động nhỏ, thường được ngôn ngữ tối ưu tự động.
+Trong các hàm đệ quy, redundant computation có thể dẫn đến exponential growth, làm chương trình chạy chậm đáng kể khi dữ liệu lớn.
+
+Exponential Growth: Thời gian chạy tăng theo lũy thừa (thường là 2^n) khi kích thước dữ liệu tăng.
+
+Cú pháp mẫu: (local [(define name expr)] body)
+
+Lưu ý quan trọng:
+
+Chỉ nên dùng local cho redundant computation trong các trường hợp đệ quy gây exponential growth.
+Tránh dùng local cho các tính toán đơn giản (như (+ x 1) lặp lại), vì:
+
+- Làm code phức tạp hơn, khó đọc.
+
+- Ngôn ngữ thường tối ưu các tính toán nhỏ tự động.
+
+Refactoring principle: Thay đổi cấu trúc (thêm local), giữ nguyên hành vi, kiểm tra kỹ.
+
+*Hello 6/7/2025*
