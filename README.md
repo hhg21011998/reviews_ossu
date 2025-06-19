@@ -1,6 +1,8 @@
 # Cảm nhận về các khóa học theo chương trình của OSSU
 LƯU Ý: Đây là ý kiến cá nhân của mình và được viết dựa trên cảm nhận của mình. Hãy tự trải nghiệm và đưa ra nhận định riêng của bạn.
 
+My [Trello](https://trello.com/invite/b/6272869e21ecc905ef6558fb/d204d6f164c4cc2be2f355e7860dcad9/ossu-hhg).
+
 Nếu bạn chưa bao giờ nghe đến OSSU. [Nhấn vào đây](https://github.com/ossu/computer-science/).
 
 Bắt đầu viết vào Tháng 9-2022
@@ -114,4 +116,33 @@ Tránh dùng local cho các tính toán đơn giản (như (+ x 1) lặp lại),
 
 Refactoring principle: Thay đổi cấu trúc (thêm local), giữ nguyên hành vi, kiểm tra kỹ.
 
-*Hello 6/7/2025*
+# 8: Abstraction Module
+
+**Khái niệm chính: Abstraction và Higher-Order Functions**
+
+*Abstraction là gì?*
+
+Abstraction là quá trình tạo ra một hàm tổng quát hơn từ các biểu thức/hàm cụ thể bằng cách thay thế các điểm khác biệt (points of variance) bằng tham số.
+
+*Mục đích:*
+
+1. Loại bỏ lặp lại: Giảm code trùng lặp, làm code ngắn gọn.
+
+2. Tăng tính tổng quát: Hàm trừu tượng áp dụng được cho nhiều trường hợp.
+
+3. Dễ bảo trì: Chỉ cần sửa hàm trừu tượng thay vì nhiều hàm cụ thể.
+
+*Higher-Order Functions là gì?*
+
+Hàm nhận hoặc trả về hàm khác làm tham số/kết quả.
+
+Tầm quan trọng:
+
+Built-in abstract functions làm code ngắn gọn, đáng tin cậy, và tổng quát.
+
+So sánh signature là kỹ năng cốt lõi để chọn công cụ phù hợp.
+
+Bỏ base-case test tiết kiệm thời gian, nhưng vẫn cần test đặc trưng.
+
+
+*Hello 6/19/2025*
