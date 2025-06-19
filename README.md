@@ -136,7 +136,21 @@ Abstraction là quá trình tạo ra một hàm tổng quát hơn từ các bi�
 
 Hàm nhận hoặc trả về hàm khác làm tham số/kết quả.
 
-Tầm quan trọng:
+**Using Built in Abstract Functions
+
+*Dựa trên hành vi:
+
+map: Áp dụng hàm, giữ độ dài danh sách.
+
+filter: Lọc, có thể giảm độ dài.
+
+foldr: Kết hợp thành một giá trị.
+
+andmap/ormap: Kiểm tra điều kiện.
+
+build-list: Tạo danh sách từ số.
+
+*Tầm quan trọng:*
 
 Built-in abstract functions làm code ngắn gọn, đáng tin cậy, và tổng quát.
 
