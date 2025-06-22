@@ -51,13 +51,27 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
 
-**Phần đánh giá How to code: Complex Data tôi sưu tầm từ một học viên khác, được nhận xét rất đầy đủ. Tôi quay lại với khoá học này vào tháng 4/2025, tôi mất khoảng 1 tháng để học lại phần Simple Data, hiện tại tôi đã là một game coder được 2 năm rồi.** 
+*Phần đánh giá How to code: Complex Data tôi sưu tầm từ một học viên khác, được nhận xét rất đầy đủ. Tôi quay lại với khoá học này vào tháng 4/2025, tôi mất khoảng 1 tháng để học lại phần Simple Data và hiện tại tôi đã là một game coder được 2 năm rồi.* 
 
-Khóa học thứ hai dạy bạn các công thức và phương pháp chung để xây dựng các kiểu dữ liệu lớn và phức tạp hơn từ các kiểu dữ liệu cơ bản. Khi kết hợp các kiểu, chúng được giữ độc lập nhất có thể để tách biệt các mối quan tâm và giảm sự phụ thuộc. Những nguyên tắc này được tích hợp sẵn trong các ngôn ngữ FP nghiêm túc hơn như Haskell và Scala, với các trình kiểm tra kiểu MOAR, kiểu dữ liệu đại số, và tạo bài kiểm tra tự động (như quickCheck và scalaCheck). Các kiểu “liệt kê” (enumeration) và “một trong số” (one-of) được dạy trong khóa học được tái hiện trong Scala (qua enum và “sealed traits”) và Haskell, được sử dụng trong “khớp mẫu” (pattern matching, bạn sẽ học điều này trong Prog Lang Part A). Khớp mẫu trong các ngôn ngữ này giống như các mẫu được sử dụng trong khóa học này.
+Khóa học thứ hai dạy bạn các công thức và phương pháp chung để xây dựng các kiểu dữ liệu lớn và phức tạp hơn từ các kiểu dữ liệu cơ bản. 
+Khi kết hợp các kiểu, chúng được giữ độc lập nhất có thể để tách biệt các mối quan tâm và giảm sự phụ thuộc. 
+Những nguyên tắc này được tích hợp sẵn trong các ngôn ngữ FP nghiêm túc hơn như Haskell và Scala. 
+Các kiểu “liệt kê” (enumeration) và “một trong số” (one-of) được dạy trong khóa học được tái hiện trong Scala (qua enum và “sealed traits”) và Haskell, 
+được sử dụng trong “khớp mẫu” (pattern matching, bạn sẽ học điều này trong Prog Lang Part A). 
+Khớp mẫu trong các ngôn ngữ này giống như các mẫu được sử dụng trong khóa học này.
 
-Ngoài lập trình hàm, các khóa học còn dạy các nguyên tắc chung từ mọi mô hình và ngôn ngữ như đóng gói, trừu tượng hóa dữ liệu, suy luận kiểu, và kiểm thử; các thực hành phân tích miền, thiết kế và tái cấu trúc; cùng nhiều ví dụ về cấu trúc dữ liệu và thuật toán như cây nhị phân, đồ thị tổng quát, tìm kiếm quay lui, và giải mê cung. Giảng viên dành thời gian bất thường nhiều để mã hóa trực tiếp và giải thích mã, điều hiếm thấy ở các khóa học khác.
+Ngoài lập trình hàm, các khóa học còn dạy các nguyên tắc chung từ mọi mô hình và ngôn ngữ như 
+đóng gói (Encapsulation) với local (định nghĩa trong local chỉ khả dụng trong body, mục đích để ẩn đi các chi tiết triển khai, tránh gọi nhầm hàm và làm code dể bảo trì, tái sử dụng), 
+trừu tượng hóa dữ liệu (Abstraction) với Higher-Order Functions (Hàm nhận hoặc trả về hàm khác làm tham số/kết quả ví dụ như map, filter, build-list, ...), 
+suy luận kiểu, và kiểm thử; 
+các thực hành phân tích miền, thiết kế và tái cấu trúc; cùng nhiều ví dụ về cấu trúc dữ liệu và thuật toán như cây nhị phân, đồ thị tổng quát, tìm kiếm quay lui, và giải mê cung. 
+Giảng viên dành thời gian bất thường nhiều để mã hóa trực tiếp và giải thích mã, điều hiếm thấy ở các khóa học khác.
 
-Khóa học đầu tiên kết thúc với một trò chơi kiểu Space Invaders (thật tuyệt khi Racket có cách tích hợp để xử lý sự kiện/biến đổi gọi là “big bang”), trong khi khóa học thứ hai kết thúc với một bài tập lập trình rất khó: giải bài toán lập lịch cho trợ giảng và giờ làm việc bằng phương pháp vét cạn. Bạn cũng sẽ viết các chương trình thú vị và thử thách như giải Sudoku, tạo hình fractal, v.v. Đây thực sự là đệ quy “cường độ cao”. Không có hệ thống chấm điểm tự động để nộp mã. Bạn sẽ tự đánh giá tính đúng đắn của mã. Tôi được biết bạn có thể trả phí cho edX để giảng viên chấm bài thi cuối kỳ, nhưng đừng làm vậy.
+Khóa học đầu tiên kết thúc với một trò chơi kiểu Space Invaders (thật tuyệt khi Racket có cách tích hợp để xử lý sự kiện/biến đổi gọi là “big bang”), 
+trong khi khóa học thứ hai kết thúc với một bài tập lập trình rất khó: giải bài toán lập lịch cho trợ giảng và giờ làm việc bằng phương pháp vét cạn. 
+Bạn cũng sẽ viết các chương trình thú vị và thử thách như giải Sudoku, tạo hình fractal, v.v. Đây thực sự là đệ quy “cường độ cao”. 
+Không có hệ thống chấm điểm tự động để nộp mã. Bạn sẽ tự đánh giá tính đúng đắn của mã. 
+Tôi được biết bạn có thể trả phí cho edX để giảng viên chấm bài thi cuối kỳ, nhưng đừng làm vậy.
 
 
 
