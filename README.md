@@ -1,11 +1,11 @@
 # Cảm nhận về các khóa học theo chương trình của OSSU
 LƯU Ý: Đây là ý kiến cá nhân của mình và được viết dựa trên cảm nhận của mình. Hãy tự trải nghiệm và đưa ra nhận định riêng của bạn.
 
-My [Trello](https://trello.com/invite/b/6272869e21ecc905ef6558fb/d204d6f164c4cc2be2f355e7860dcad9/ossu-hhg).
+
 
 Nếu bạn chưa bao giờ nghe đến OSSU. [Nhấn vào đây](https://github.com/ossu/computer-science/).
 
-Bắt đầu viết vào Tháng 9-2022
+Bắt đầu viết vào Tháng 9-2022 ([Trello](https://trello.com/invite/b/6272869e21ecc905ef6558fb/d204d6f164c4cc2be2f355e7860dcad9/ossu-hhg))
 
 - [Python for Everybody](#py4e)
 - [Intro to CS and Programming with Python](#mit6001x)
@@ -50,6 +50,15 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 Đây là một bài tập nhỏ cuối khóa (thứ khiến mình thấy khoá học này hấp dẫn, kết quả của những dòng code mà bạn viết ra không chỉ là những con số hay chữ cái hay kí tự hiển thị trên shell mà là cả một trò chơi):
 
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
+
+**Phần đánh giá How to code: Complex Data tôi sưu tầm từ một học viên khác, được nhận xét rất đầy đủ. Tôi quay lại với khoá học này vào tháng 4/2025, tôi mất khoảng 1 tháng để học lại phần Simple Data, hiện tại tôi đã là một game coder được 2 năm rồi.** 
+
+Khóa học thứ hai dạy bạn các công thức và phương pháp chung để xây dựng các kiểu dữ liệu lớn và phức tạp hơn từ các kiểu dữ liệu cơ bản. Khi kết hợp các kiểu, chúng được giữ độc lập nhất có thể để tách biệt các mối quan tâm và giảm sự phụ thuộc. Những nguyên tắc này được tích hợp sẵn trong các ngôn ngữ FP nghiêm túc hơn như Haskell và Scala, với các trình kiểm tra kiểu MOAR, kiểu dữ liệu đại số, và tạo bài kiểm tra tự động (như quickCheck và scalaCheck). Các kiểu “liệt kê” (enumeration) và “một trong số” (one-of) được dạy trong khóa học được tái hiện trong Scala (qua enum và “sealed traits”) và Haskell, được sử dụng trong “khớp mẫu” (pattern matching, bạn sẽ học điều này trong Prog Lang Part A). Khớp mẫu trong các ngôn ngữ này giống như các mẫu được sử dụng trong khóa học này.
+
+Ngoài lập trình hàm, các khóa học còn dạy các nguyên tắc chung từ mọi mô hình và ngôn ngữ như đóng gói, trừu tượng hóa dữ liệu, suy luận kiểu, và kiểm thử; các thực hành phân tích miền, thiết kế và tái cấu trúc; cùng nhiều ví dụ về cấu trúc dữ liệu và thuật toán như cây nhị phân, đồ thị tổng quát, tìm kiếm quay lui, và giải mê cung. Giảng viên dành thời gian bất thường nhiều để mã hóa trực tiếp và giải thích mã, điều hiếm thấy ở các khóa học khác.
+
+Khóa học đầu tiên kết thúc với một trò chơi kiểu Space Invaders (thật tuyệt khi Racket có cách tích hợp để xử lý sự kiện/biến đổi gọi là “big bang”), trong khi khóa học thứ hai kết thúc với một bài tập lập trình rất khó: giải bài toán lập lịch cho trợ giảng và giờ làm việc bằng phương pháp vét cạn. Bạn cũng sẽ viết các chương trình thú vị và thử thách như giải Sudoku, tạo hình fractal, v.v. Đây thực sự là đệ quy “cường độ cao”. Không có hệ thống chấm điểm tự động để nộp mã. Bạn sẽ tự đánh giá tính đúng đắn của mã. Tôi được biết bạn có thể trả phí cho edX để giảng viên chấm bài thi cuối kỳ, nhưng đừng làm vậy.
+
 
 
 
@@ -158,5 +167,22 @@ Hàm nhận hoặc trả về hàm khác làm tham số/kết quả.
 
 - Bỏ base-case test tiết kiệm thời gian, nhưng vẫn cần test đặc trưng.
 
+**Closures**
 
-# Hello 6/19/2025*
+Non-closure:
+
+(define (rotate-all-90 loi)
+  (map rotate-90 loi))
+
+(define (rotate-90 i)
+  (rotate 90 i))
+  
+ Closure:
+ 
+ (define (rotate-all n loi)
+  (local [(define (rotate-n i) (rotate n i))]
+   (map rotate-n loi)))
+ 
+
+
+# Hello 6/19/2025
