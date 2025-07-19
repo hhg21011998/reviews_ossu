@@ -51,7 +51,7 @@ Những phần đầu của khóa học, bạn sẽ được hướng dẫn vi�
 
 ![final-htc-simple-data](https://user-images.githubusercontent.com/90635389/218292358-0a7ce3db-213c-4c46-95a9-0d22c7f3cb42.PNG)
 
-*Phần đánh giá How to code: Complex Data tôi sưu tầm từ một học viên khác, được nhận xét rất đầy đủ. Tôi quay lại với khoá học này vào tháng 4/2025, tôi mất khoảng 1 tháng để học lại phần Simple Data và hiện tại tôi đã là một game coder được 2 năm rồi.* 
+*Phần đánh giá How to code: Complex Data tôi sưu tầm từ một học viên khác, được nhận xét rất đầy đủ. Tôi quay lại với khoá học này vào tháng 4/2025, tôi mất khoảng 1 tháng để học lại phần Simple Data và hiện tại tôi đã là một lập trình game được 2 năm rồi.* 
 
 Khóa học thứ hai dạy bạn các công thức và phương pháp chung để xây dựng các kiểu dữ liệu lớn và phức tạp hơn từ các kiểu dữ liệu cơ bản. 
 Khi kết hợp các kiểu, chúng được giữ độc lập nhất có thể để tách biệt các mối quan tâm và giảm sự phụ thuộc. 
@@ -73,130 +73,6 @@ Bạn cũng sẽ viết các chương trình thú vị và thử thách như gi�
 Không có hệ thống chấm điểm tự động để nộp mã. Bạn sẽ tự đánh giá tính đúng đắn của mã. 
 Tôi được biết bạn có thể trả phí cho edX để giảng viên chấm bài thi cuối kỳ, nhưng đừng làm vậy.
 
+# Hello 7/13/2025
 
-
-
-
-# 7b: Local
-
-**1. Dù ít code mới, việc thiết kế và cải thiện cấu trúc chương trình là kỹ năng quan trọng của good programmers.**
-
-**Mục tiêu học tập (Learning Goals):**
-
-- Viết local expressions đúng cú pháp.
-
-- Vẽ sơ đồ lexical scoping trên các biểu thức sử dụng local.
-
-- Thực hiện hand-evaluation (đánh giá thủ công) các biểu thức local.
-
-- Sử dụng local để encapsulate (đóng gói) các hàm phụ trợ (private helper functions).
-
-- Sử dụng local để tránh redundant computation (tính toán lặp lại không cần thiết).
-
-**2. Khái niệm chính**
-
-**Encapsulation là gì?**
-
-Định nghĩa: Encapsulation là kỹ thuật đóng gói các thành phần chương trình (functions, constants, structures) vào một đơn vị (capsule), chỉ để lộ giao diện công khai (public interface).
-
-**Mục đích:**
-
-- Namespace management: Tránh xung đột tên trong hệ thống lớn.
-
-- Ẩn chi tiết triển khai: Ngăn gọi nhầm hàm phụ trợ hoặc phụ thuộc vào logic nội bộ.
-
-- Tăng tính module hóa: Làm code dễ bảo trì, tái sử dụng, rõ ràng.
-
-**Cơ chế với local:**
-
-- Cú pháp: (local [define ... define ...] body)
-
-- Định nghĩa trong local chỉ khả dụng trong body.
-
-- body gọi hàm nội bộ để bắt đầu xử lý, gọi là trampoline (thuật ngữ vui ám chỉ việc "nhảy" vào logic nội bộ).
-
-**Redundant Computation và Exponential Growth**
-
-Định nghĩa: 
-
-Redundant Computation: Tính toán cùng một giá trị nhiều lần trong chương trình, gây lãng phí thời gian và tài nguyên.
-
-Trong các trường hợp đơn giản (như (+ x 1) lặp lại), tác động nhỏ, thường được ngôn ngữ tối ưu tự động.
-Trong các hàm đệ quy, redundant computation có thể dẫn đến exponential growth, làm chương trình chạy chậm đáng kể khi dữ liệu lớn.
-
-Exponential Growth: Thời gian chạy tăng theo lũy thừa (thường là 2^n) khi kích thước dữ liệu tăng.
-
-Cú pháp mẫu: (local [(define name expr)] body)
-
-Lưu ý quan trọng:
-
-Chỉ nên dùng local cho redundant computation trong các trường hợp đệ quy gây exponential growth.
-Tránh dùng local cho các tính toán đơn giản (như (+ x 1) lặp lại), vì:
-
-- Làm code phức tạp hơn, khó đọc.
-
-- Ngôn ngữ thường tối ưu các tính toán nhỏ tự động.
-
-Refactoring principle: Thay đổi cấu trúc (thêm local), giữ nguyên hành vi, kiểm tra kỹ.
-
-# 8: Abstraction Module
-
-**Khái niệm chính: Abstraction và Higher-Order Functions**
-
-*Abstraction là gì?*
-
-Abstraction là quá trình tạo ra một hàm tổng quát hơn từ các biểu thức/hàm cụ thể bằng cách thay thế các điểm khác biệt (points of variance) bằng tham số.
-
-*Mục đích:*
-
-1. Loại bỏ lặp lại: Giảm code trùng lặp, làm code ngắn gọn.
-
-2. Tăng tính tổng quát: Hàm trừu tượng áp dụng được cho nhiều trường hợp.
-
-3. Dễ bảo trì: Chỉ cần sửa hàm trừu tượng thay vì nhiều hàm cụ thể.
-
-*Higher-Order Functions là gì?*
-
-Hàm nhận hoặc trả về hàm khác làm tham số/kết quả.
-
-**Using Built in Abstract Functions**
-
-*Dựa trên hành vi:*
-
-- map: Áp dụng hàm, giữ độ dài danh sách.
-
-- filter: Lọc, có thể giảm độ dài.
-
-- foldr: Kết hợp thành một giá trị.
-
-- andmap/ormap: Kiểm tra điều kiện.
-
-- build-list: Tạo danh sách từ số.
-
-*Tầm quan trọng:*
-
-- Built-in abstract functions làm code ngắn gọn, đáng tin cậy, và tổng quát.
-
-- So sánh signature là kỹ năng cốt lõi để chọn công cụ phù hợp.
-
-- Bỏ base-case test tiết kiệm thời gian, nhưng vẫn cần test đặc trưng.
-
-**Closures**
-
-Non-closure:
-
-(define (rotate-all-90 loi)
-  (map rotate-90 loi))
-
-(define (rotate-90 i)
-  (rotate 90 i))
-  
- Closure:
- 
- (define (rotate-all n loi)
-  (local [(define (rotate-n i) (rotate n i))]
-   (map rotate-n loi)))
- 
-
-
-# Hello 6/19/2025
+Vẫn đang chật vật với khoá học HtC: Complex Data :')))
