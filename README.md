@@ -73,6 +73,6 @@ Bạn cũng sẽ viết các chương trình thú vị và thử thách như gi�
 Không có hệ thống chấm điểm tự động để nộp mã. Bạn sẽ tự đánh giá tính đúng đắn của mã. 
 Tôi được biết bạn có thể trả phí cho edX để giảng viên chấm bài thi cuối kỳ, nhưng đừng làm vậy.
 
-# Hello 7/13/2025
+# Hello 8/9/2025
 
 Vẫn đang chật vật với khoá học HtC: Complex Data :')))
