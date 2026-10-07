@@ -193,3 +193,25 @@
 (check-expect (boxify (rectangle 40 40 "solid" "red"))
               (overlay (rectangle 40 40 "solid" "red")
                        (rectangle 42 42 "outline" "black")))
+
+;; Test 25: text image keeps its content while gaining a 1-pixel border per side
+(check-expect (image-width (boxify (text "OSSU" 18 "navy")))
+              (+ (image-width (text "OSSU" 18 "navy")) 2))
+
+;; Test 26: non-rectangular triangle gets the same two-pixel height increase
+(check-expect (image-height (boxify (triangle 30 "solid" "purple")))
+              (+ (image-height (triangle 30 "solid" "purple")) 2))
+
+;; Test 27: a composed image is boxed according to its combined bounding box
+(check-expect
+ (boxify (beside (circle 5 "solid" "red")
+                 (rectangle 8 14 "solid" "blue")))
+ (overlay (beside (circle 5 "solid" "red")
+                  (rectangle 8 14 "solid" "blue"))
+          (rectangle
+           (+ (image-width (beside (circle 5 "solid" "red")
+                                   (rectangle 8 14 "solid" "blue"))) 2)
+           (+ (image-height (beside (circle 5 "solid" "red")
+                                    (rectangle 8 14 "solid" "blue"))) 2)
+           "outline"
+           "black")))
